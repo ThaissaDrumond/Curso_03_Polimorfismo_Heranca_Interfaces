@@ -9,4 +9,9 @@ public class ContaPoupanca extends Conta {
     construtor 'super()' não compila nesta classe, sendo necessario a definição dos parametros conforme o construtor
     da classe mãe      */
 
+    @Override
+    public void deposita(double valor) {
+        super.saldo += valor;
+
+    }
 }

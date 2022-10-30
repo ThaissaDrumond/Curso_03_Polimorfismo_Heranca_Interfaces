@@ -1,11 +1,11 @@
-public class Funcionario {
+public abstract class Funcionario {
     private String nome;
     private String cpf;
     private double salario; //protect: visibilidade apenas entre classes mãe/filha
 
-    public double getBonificacao() {
-        return this.salario * 0.05;
-    }
+    public abstract double getBonificacao(); /* No caso de métodos abstratos, ele não tem um corpo, ou seja, não foi
+    implementado. Tal método será implementado somente nas classes filhas, de forma 'obrigatória'. A não imlementação
+    de um método abstrato nas classes filhas, gera erro de compilação na classe filha em questão.*/
 
     public String getNome() {
         return nome;
