@@ -6,6 +6,8 @@ precisará implementa-lo.*/
 public class TesteFuncionario {
     public static void main(String[] args) {
 
+        Cliente cliente = new Cliente();
+
         /*"Funcionario nico = new Funcionario();" O 'new' indica a criação de algo 'concreto', como a classe
         'Funcionario' é abstrata, corre erro de compilação */
         Funcionario nico = new Gerente(); /*Instanciar a partir da classe funcionario é possível, pois o conceito

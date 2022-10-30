@@ -1,18 +1,8 @@
-//Gerente é um Funcionário, Gerente herda da classe Funcionário
+//Gerente é um Funcionário, Gerente herda da classe Funcionário, assina o contrato autenticavel
 
-public class Gerente extends Funcionario{
+public class Gerente extends Funcionario implements Autenticavel{
     private int senha;
 
-    public void setSenha(int senha) {
-        this.senha = senha;
-    }
-    public boolean autentica(int senha) {
-        if(this.senha == senha) {
-            return true;
-        } else {
-            return false;
-        }
-    }
     public double getBonificacao() {/* Polimorfismo: "public double getBonificacao()" é a assinatura do método. Quando
     a assinatura do método de uma classe filha é a mesma que a da classe mãe, alterando apenas o comportamento do
     método(bloco de execução), chamamos de reescrita(tambbém pode-se chamar de Subtipo, sobrescrita ou sobreposição).*/
@@ -25,4 +15,18 @@ public class Gerente extends Funcionario{
         implementação nas classes filhas.*/
     }/* Outra forma de polimorfismo é a sobrecarga. Na sobrecarga, mantém-se a assinatura e o bloco de excução iguais
     nas classes mãe e filha, alterando os parametros).*/
+
+    @Override
+    public void setSenha(int senha) {
+        this.senha = senha;;
+    }
+
+    @Override
+    public boolean autentica(int senha) {
+        if (this.senha == senha){
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

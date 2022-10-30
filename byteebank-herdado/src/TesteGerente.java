@@ -1,6 +1,8 @@
 public class TesteGerente {
 
     public static void main(String[] args) {
+        Autenticavel referencia = new Gerente();/*Instanciar a partir da interface Autenticavel é possível, pois também
+        é algo bem genérico. */
         Gerente g1 = new Gerente();
         g1.setNome("Marco");
         g1.setCpf("235568413");
