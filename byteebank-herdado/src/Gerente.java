@@ -1,7 +1,7 @@
 //Gerente é um Funcionário, Gerente herda da classe Funcionário, assina o contrato autenticavel
 
 public class Gerente extends Funcionario implements Autenticavel{
-    private int senha;
+    private Autenticador autenticador;
 
     public double getBonificacao() {/* Polimorfismo: "public double getBonificacao()" é a assinatura do método. Quando
     a assinatura do método de uma classe filha é a mesma que a da classe mãe, alterando apenas o comportamento do
@@ -18,15 +18,11 @@ public class Gerente extends Funcionario implements Autenticavel{
 
     @Override
     public void setSenha(int senha) {
-        this.senha = senha;;
+        this.autenticador.setSenha(senha);
     }
 
     @Override
     public boolean autentica(int senha) {
-        if (this.senha == senha){
-            return true;
-        } else {
-            return false;
-        }
+        return this.autenticador.autentica(senha);
     }
 }

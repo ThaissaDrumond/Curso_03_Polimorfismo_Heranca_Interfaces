@@ -1,7 +1,10 @@
-//contrato Autenticavel
-    //quem assinar esse contrato precisa implementar
-        //metodo setSenha
-        //metodo autentica
+/*Contrato Autenticavel
+    quem "assinar" esse contrato precisa implementar:
+        metodo setSenha
+        metodo autentica
+    ‘Interfaces’ definem regras
+    Não aceita código "concreto", não sendo possível definir atributos ou métodos concretos. Todos os métodos devem
+        ser "implementados" nas classes que utilizarm essa ‘interface’.*/
 public abstract interface Autenticavel{
     //private int senha;
 
